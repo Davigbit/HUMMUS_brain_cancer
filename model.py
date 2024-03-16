@@ -7,13 +7,15 @@ import joblib
 
 folder_n = './Negative/'
 folder_p = './Positive/'
-width = 144
-height = 144
+width = 240
+height = 240
 
 df1 = preprocess_folder(folder_n, width, height)
 df2 = preprocess_folder(folder_p, width, height)
 df = pd.concat([df1, df2], ignore_index=True)
 df = df.sample(frac=1).reset_index(drop=True)
+
+joblib.dump(df, 'data.pkl')
 
 X = df.drop('label', axis=1)
 y = df['label']
