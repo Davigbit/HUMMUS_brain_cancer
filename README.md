@@ -5,3 +5,6 @@ The recent AI boom inspired our team to apply machine learning to healthcare. Th
 
 # What it does:
 Our machine learning model looks at CT scans of suspected brain cancer patients and determines if they have a tumor or not. All this with an accuracy of 97%.
+
+# How to use:
+Dowload all files and run 'gui.py'. The last should deploy an interactive window requesting the submission of a CT scan image.
